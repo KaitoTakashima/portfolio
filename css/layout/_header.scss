@@ -1,3 +1,24 @@
-p{
-    color:red;
+.l-header{
+    position:relative;
+    & .site-title_sp{
+        position:absolute;
+        color:white;
+        font-size: 20px;
+        margin:10px;
+    }
+    & .main_visual_area{
+        // position:relative;
+        & .main-visual{
+            background-image: url("../image/6DFBECF5-411A-4601-AF2F-17C93C7923D8.png");
+            height:100vh;
+            background-repeat: no-repeat;
+           background-position-x:30%;
+
+        }
+        & .l-scrolldown {
+            position:absolute;
+            bottom:10px;
+            left:50%;
+        }
+    }
 }

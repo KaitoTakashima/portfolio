@@ -5,6 +5,15 @@
   font-family: 'Noto Sans JP',"遊ゴシック体", YuGothic, "遊ゴシック Medium","Yu Gothic Medium", "遊ゴシック", "Yu Gothic", sans-serif;
 }
 
+html {
+  /* ルートのフォントサイズを10pxに設定しておく */
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+}
+
 li {
   list-style: none;
 }
@@ -84,11 +93,226 @@ img:not([alt]) {
   }
 }
 
-a {
-  color: #111111;
+.l-fotter {
+  background-color: #333333;
 }
 
-p {
-  color: red;
+.l-header {
+  position: relative;
+}
+
+.l-header .site-title_sp {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  margin: 10px;
+}
+
+.l-header .main_visual_area .main-visual {
+  background-image: url("../image/6DFBECF5-411A-4601-AF2F-17C93C7923D8.png");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position-x: 30%;
+}
+
+.l-header .main_visual_area .l-scrolldown {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+}
+
+.l-main_wrapper {
+  padding: 120px 30px;
+}
+
+.l-main_wrapper .l-section {
+  margin-bottom: 120px;
+}
+
+.c-scrolldown {
+  /*上から下にかけて丸が透過→不透明→透過する*/
+}
+
+.c-scrolldown span {
+  /*描画位置*/
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  /*テキストの形状*/
+  color: #eee;
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  /*縦書き設定*/
+  -ms-writing-mode: tb-rl;
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}
+
+.c-scrolldown::before {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: -4px;
+  /*丸の形状*/
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #eee;
+  /*丸の動き1.6秒かけて透過し、永遠にループ*/
+  -webkit-animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+          animation: circlemove 1.6s ease-in-out infinite, cirlemovehide 1.6s ease-out infinite;
+}
+
+@-webkit-keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+@-webkit-keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes cirlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.c-scrolldown::after {
+  content: "";
+  /*描画位置*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 2px;
+  height: 50px;
+  background: #eee;
+}
+
+.c-sec_title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.c-sec_title span {
+  display: block;
+  font-size: 12px;
+}
+
+.c-sns_btn {
+  border: 1px solid #333;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  padding: 30px 0;
+  margin-bottom: 40px;
+}
+
+.c-page_top {
+  text-align: center;
+}
+
+.c-page_top a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  position: relative;
+}
+
+.c-page_top a::before {
+  content: "";
+  display: block;
+  border-top: solid 3px #333;
+  border-left: solid 3px #333;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(45deg);
+  -webkit-transform: translateX(-50%) rotate(45deg);
+}
+
+.p-about_sec .p-about_content {
+  margin-bottom: 40px;
+  line-height: 2;
+}
+
+.p-about_sec .p-about_profile {
+  line-height: 2;
+}
+
+.p-skills_sec .p-skills_group .p-skills_content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.p-skills_sec .p-skills_group .p-skills_content img {
+  width: 30%;
+}
+
+.p-skills_sec .p-skills_group .p-skills_content figcaption {
+  font-weight: bold;
+}
+
+.p-works_sec .p-works_group .p-work_content {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.p-works_sec .p-works_group .p-work_content img {
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.p-music_sec .p-music_heading {
+  margin: 0 auto;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.p-music_sec .p-music_content iframe {
+  display: block;
+  width: 100%;
+  height: 45vw;
+  margin-bottom: 40px;
 }
 /*# sourceMappingURL=style.css.map */
