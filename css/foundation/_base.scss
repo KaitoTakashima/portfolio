@@ -1,0 +1,51 @@
+*{
+    box-sizing:border-box;
+	font-family:'Noto Sans JP',"遊ゴシック体", YuGothic, "遊ゴシック Medium","Yu Gothic Medium", "遊ゴシック", "Yu Gothic", sans-serif;
+}
+@mixin breakpoint( $point ) {
+	@if $point == sp {
+		@media ( min-width: 560px ) {
+			@content ;
+		}
+	}
+	@if $point == tablet{
+		@media ( min-width: 960px ) {
+			@content ;
+		}
+	}
+}
+
+// color指定
+$yellow:#d9cd2b;
+$blue_light_further:#F4F6FD;
+$blue_light:#2b62d9;
+$blue_deep:#2451b2;
+$white:#ffffff;
+$black:#111111;
+
+//font
+
+$bold_font:'Noto Sans JP',"遊ゴシック体", YuGothic, "遊ゴシック", "Yu Gothic", sans-serif;
+$intro_heading_font:fot-tsukuardgothic-std, "遊ゴシック体", YuGothic, "遊ゴシック Medium","Yu Gothic Medium", "遊ゴシック", "Yu Gothic", sans-serif;
+
+
+//font-size
+$main_text:4.3vw;
+$heading_text:4.5vw;
+$title_text:6vw;
+
+$main_text_tablet:2.2vw;
+$heading_text_tablet:3vw;
+$title_text_tablet:5vw;
+
+$main_text_pc:18px;
+$heading_text_pc:28px;
+$title_text_pc:36px;
+
+//line-height
+$main_line-height:1.7;
+
+li{
+	list-style: none;
+}
+
