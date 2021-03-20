@@ -6,19 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaito Takashima/Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="./js/hamburger.js"></script>
 </head>
 <body>
 
-  <header class="l-header">
-    <h1 class="site-title_sp">Portfolio <br>by Kaito Takashima</h1>
-    <div class="main_visual_area">
-        <div class="main-visual">
+    <header class="l-header">
+        <nav class="hamburger_menu">
+            <div class="header_nav_sp">
+                <div class="slide_menu_btn">
+                    <a class="menu-trigger">
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="slide_menu_nav js-open">
+                    <ul class="slide_menu_content">
+                        <li class="slide_menu_list"><a href="#">Home</a></li>
+                        <li class="slide_menu_list"><a href="">About</a></li>
+                        <li class="slide_menu_list"><a href="">Skills</a></li>
+                        <li class="slide_menu_list"><a href="">Works</a></li>
+                        <li class="slide_menu_list"><a href="">Music</a></li>
+                    </ul>
+                    <ul class="p-sns_block">
+                        <li class="p-sns_list">
+                            <a href="https://twitter.com/umishima_gt" target="_blank" rel="noopener"><img src="image/twitter_img_02@2x.png" alt=""></a>
+                        </li>
+                        <li class="p-sns_list">
+                            <a href="mailto:front0705@gmail.com" target="_blank" rel="noopener"><img src="image/icon_mail_02@2x.png" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <h1 class="site-title_sp">Portfolio <br>by Kaito Takashima</h1>
+        <div class="main_visual_area">
+            <div class="main-visual">
+                <h1 class="site_title_pc">Portfolio <br>by Kaito Takashima</h1>
+            </div>
+            <nav class="header_nav_pc">
+                <ul class="header_nav_content">
+                    <li class="header_nav_list"><a href="#">Home</a></li>
+                    <li class="header_nav_list"><a href="#">About</a></li>
+                    <li class="header_nav_list"><a href="#">Skills</a></li>
+                    <li class="header_nav_list"><a href="#">Works</a></li>
+                    <li class="header_nav_list"><a href="#">Music</a></li>
+                </ul>
+            </nav>
         </div>
         <div class="l-scrolldown c-scrolldown">
             <span>Scroll</span>
         </div>
-    </div>
-  </header>
+    </header>
 
   <main class="l-main_wrapper">
     <section class="l-section p-about_sec">
@@ -106,25 +146,56 @@
             <iframe src="https://www.youtube.com/embed/ydYuokIG3mo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="p-music_sns">
-            <a href="https://www.youtube.com/channel/UCFlwud__iOLccnl3Y6YBb8A" class="c-sns_btn" target="_blank" rel="noopener">
+            <a href="https://www.youtube.com/channel/UCFlwud__iOLccnl3Y6YBb8A" class="c-sns_btn p-sns_btn" target="_blank" rel="noopener">
                 YouTube
             </a>
-            <a href="https://www.nicovideo.jp/my/mylist/70408110?ref=pc_mypage_mylist" class="c-sns_btn" target="_blank" rel="noopener">
+            <a href="https://www.nicovideo.jp/my/mylist/70408110?ref=pc_mypage_mylist" class="c-sns_btn p-sns_btn" target="_blank" rel="noopener">
                 niconico
             </a>
-            <a href="https://twitter.com/umishima_gt" class="c-sns_btn" target="_blank" rel="noopener">
+            <a href="https://twitter.com/umishima_gt" class="c-sns_btn p-sns_btn" target="_blank" rel="noopener">
                 Twitter
             </a>
         </div>
     </section><!-- music_sec -->
 
-    <p class="c-page_top">
-        <a href="#" class="">PageTop</a>
-    </p>
   </main>
 
   <footer class="l-fotter">
-
+    <p class="l-page_top c-page_top">
+        <a href="#" class="">PageTop</a>
+    </p>
+    <div class="l-footer-inner">
+        <ul class="p-footer_nav">
+            <li class="p-footer_nav_list">
+                <ul class="p-footer_nav_content">
+                    <li><a href="">Home<span>-</span>ホーム</a></li>
+                </ul>
+            </li>
+            <li class="p-footer_nav_list">
+                <ul class="p-footer_nav_content">
+                    <li><a href="">About<span>-</span>私について</a></li>
+                    <li><a href="">Skills<span>-</span>使用技術</a></li>
+                </ul>
+            </li>
+            <li class="p-footer_nav_list">
+                <ul class="p-footer_nav_content">
+                    <li><a href="">Works<span>-</span>制作実績</a></li>
+                    <li><a href="">Music<span>-</span>音楽制作</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="p-sns_block">
+            <li class="p-sns_list">
+                <a href="https://twitter.com/umishima_gt" target="_blank" rel="noopener"><img src="image/twitter_img_02@2x.png" alt=""></a>
+            </li>
+            <li class="p-sns_list">
+                <a href="mailto:front0705@gmail.com" target="_blank" rel="noopener"><img src="image/icon_mail_02@2x.png" alt=""></a>
+            </li>
+        </ul>
+        <div class="c-copyright">
+            <p><small>Copyright(C) Kaito Takashima All Rights Reserved.</small></p>
+        </div>
+    </div>
   </footer>
 
 </body>
