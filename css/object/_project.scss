@@ -145,18 +145,30 @@
 }
 
 .p-footer_nav{
+    @include breakpoint (tablet){
+        display:flex;
+        justify-content: center;
+    }
     & .p-footer_nav_list{
         margin-bottom:36px;
         & .p-footer_nav_content{
             display:flex;
             & li{
                 margin-right:60px;
+                @include breakpoint (tablet){
+                    margin:0 30px;
+                }
                 & a{
                     color:white;
                     text-decoration: none;
-                    font-size: 13px;
+                    font-size: 1.6rem;
+                    font-weight: bold;
                     & span{
-                        margin:0 5px;
+                        margin:0 .1rem 0 .5rem;
+                    }
+                    & .p-ja_title{
+                        font-size:1rem;
+                        font-weight: normal;
                     }
                 }
 
@@ -178,10 +190,17 @@
 .p-sns_block{
     display:flex;
     position:relative;
+    @include breakpoint (tablet){
+        justify-content: center;
+    }
+
     & .p-sns_list{
         margin-right:20px;
         position:relative;
         z-index: 1;
+        @include breakpoint (tablet){
+            margin:0 20px;
+        }
         & a{
             & img{
                 width:30px;

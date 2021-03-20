@@ -10,5 +10,8 @@
     & .l-footer-inner{
         background-color: #333333;
         padding:40px 30px;
+        @include breakpoint (tablet){
+            padding:80px 30px 40px;
+        }
     }
 }
