@@ -23,7 +23,9 @@ body{
 	font-size: 1.6em;
     // overflow-x: hidden;
 }
-
+a{
+	text-decoration: none;
+}
 // color指定
 $yellow:#d9cd2b;
 $blue_light_further:#F4F6FD;

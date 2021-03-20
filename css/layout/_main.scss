@@ -1,6 +1,7 @@
 .l-main_wrapper{
     padding:120px 30px;
     & .l-section{
-        margin-bottom:120px;
+        max-width: 920px;
+        margin: 0 auto 120px;
     }
 }

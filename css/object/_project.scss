@@ -9,11 +9,37 @@
 }
 .p-skills_sec{
     & .p-skills_group{
+        @include breakpoint (sp){
+            display:flex;
+            flex-wrap: wrap;
+        }
         & .p-skills_content{
             text-align: center;
             margin-bottom:40px;
+            @include breakpoint (sp){
+                width:calc((100% / 2) - (40px / 2));
+                margin-right: 20px;
+                margin-bottom:80px;
+                &:nth-child(2n){
+                    margin-right: 0;
+                }
+            }
+            @include breakpoint (tablet){
+                width:calc((100% / 3) - (80px / 3));
+                margin-right: 40px;
+                margin-bottom:80px;
+                &:nth-child(2n){
+                    margin-right: 40px;
+                }
+                &:nth-child(3n){
+                    margin-right: 0px;
+                }
+            }
             & img{
-                width:30%;
+                width:40%;
+                @include breakpoint (tablet){
+                    width:50%;
+                }
             }
             & figcaption{
                 font-weight: bold;
@@ -23,15 +49,50 @@
 }
 .p-works_sec{
     & .p-works_group{
+        @include breakpoint (sp){
+            display:flex;
+            flex-wrap: wrap;
+        }
         & .p-work_content{
             text-align: center;
             margin-bottom:40px;
+            @include breakpoint (sp){
+                width:calc((100% / 2) - (40px / 2));
+                margin-right: 40px;
+                margin-bottom:80px;
+                &:nth-child(2n){
+                    margin-right: 0px;
+                }
+            }
+            @include breakpoint (tablet){
+                width:calc((100% / 3) - (80px / 3));
+                margin-right: 40px;
+                margin-bottom:80px;
+                &:nth-child(2n){
+                    margin-right: 40px;
+                }
+                &:nth-child(3n){
+                    margin-right: 0px;
+                }
+            }
             & img{
                 margin-bottom:20px;
                 cursor: pointer;
+                filter: grayscale(80%);
+                transition: all 0.3s;
+                &:hover{
+                    filter: grayscale(0);
+                }
+                @include breakpoint (sp){
+                    width:90%;
+                }
+                @include breakpoint (tablet){
+                    width:100%;
+                }
             }
         }
     }
+   
 }
 
 .p-music_sec{
@@ -39,14 +100,93 @@
         margin:0 auto;
         width:100%;
         margin-bottom:40px;
+        @include breakpoint (tablet){
+            margin-bottom:80px;
+        }
     }
     & .p-music_content{
+        @include breakpoint (tablet){
+            display:flex;
+            flex-wrap: wrap;
+        }
         & iframe{
             display:block;
             width:100%;
             height:45vw;
             margin-bottom:40px;
+            @include breakpoint (tablet){
+                height:24vw;
+                max-height: 250px;
+                width:calc(100% / 2 - (40px / 2));
+                margin-right: 40px;
+                margin-bottom:80px;
+                &:nth-child(2n){
+                    margin-right:0;
+                }
+            }
         }
     }
-    
+    & .p-music_sns{
+        @include breakpoint (tablet){
+            display:flex;
+            flex-wrap: wrap;
+        }
+        & .p-sns_btn{
+            @include breakpoint (tablet){
+                width:calc((100% / 3) - (80px / 3));
+                margin-right: 40px;
+                &:nth-child(3n){
+                    margin-right:0;
+                }
+            }
+        }
+    }
+
 }
+
+.p-footer_nav{
+    & .p-footer_nav_list{
+        margin-bottom:36px;
+        & .p-footer_nav_content{
+            display:flex;
+            & li{
+                margin-right:60px;
+                & a{
+                    color:white;
+                    text-decoration: none;
+                    font-size: 13px;
+                    & span{
+                        margin:0 5px;
+                    }
+                }
+
+            }
+        }
+        &:nth-child(3){
+            margin-bottom:80px;
+            & .p-footer_nav_content{
+                & li{
+                    &:nth-child(2){
+                        margin-left:10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.p-sns_block{
+    display:flex;
+    position:relative;
+    & .p-sns_list{
+        margin-right:20px;
+        position:relative;
+        z-index: 1;
+        & a{
+            & img{
+                width:30px;
+            }
+        }
+    }
+}
+

@@ -1,19 +1,22 @@
 .c-scrolldown{
     & span{
-    /*描画位置*/
-	position: absolute;
-	right:10px;
-	bottom:10px;
+        /*描画位置*/
+        position: absolute;
+        right:10px;
+        bottom:10px;
 
-    /*テキストの形状*/
-	color: #eee;
-	font-size: 0.7rem;
-	letter-spacing: 0.05em;
+        /*テキストの形状*/
+        color: #eee;
+        font-size: 0.7rem;
+        letter-spacing: 0.05em;
 
-	/*縦書き設定*/
-	-ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
+        /*縦書き設定*/
+        -ms-writing-mode: tb-rl;
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        @include breakpoint (tablet){
+            color: #333;
+        }
     }
     &::before{
         content: "";
@@ -28,16 +31,19 @@
         height:10px;
         border-radius: 50%;
         background:#eee;
+        @include breakpoint (tablet){
+            background: #333;
+        }
 
         /*丸の動き1.6秒かけて透過し、永遠にループ*/
         animation:
             circlemove 1.6s ease-in-out infinite,
             cirlemovehide 1.6s ease-out infinite;
-    }
-    @keyframes circlemove{
-        0%{bottom:45px;}
-       100%{bottom:-5px;}
-   }
+        }
+        @keyframes circlemove{
+            0%{bottom:45px;}
+            100%{bottom:-5px;}
+        }
 
   /*上から下にかけて丸が透過→不透明→透過する*/
     @keyframes cirlemovehide{
@@ -57,12 +63,18 @@
         width:2px;
         height: 50px;
         background:#eee;
+        @include breakpoint (tablet){
+            background: #333;
+        }
    }
 }
 
 .c-sec_title{
     text-align: center;
     margin-bottom:40px;
+    @include breakpoint (tablet){
+        margin-bottom:80px;
+    }
     & span{
         display:block;
         font-size:12px;
@@ -81,17 +93,24 @@
 }
 
 .c-page_top{
-    text-align: center;
     & a{
         text-decoration: none;
         color:#333;
         font-weight: bold;
         position: relative;
+        font-size: 1.2rem;
+        @include breakpoint (tablet){
+            /*縦書き設定*/
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            font-size: 1.6rem;
+        }
         &::before{
             content:"";
             display:block;
-            border-top: solid 3px #333;
-            border-left: solid 3px #333;
+            border-top: solid 2px #333;
+            border-left: solid 2px #333;
             width: 20px;
             height: 20px;
             position: absolute;
@@ -100,6 +119,18 @@
             transform: translateX(-50%) rotate(45deg);
             -moz-transform: translateX(-50%) rotate(45deg);
             -webkit-transform: translateX(-50%) rotate(45deg);
+            @include breakpoint (tablet){
+                /*縦書き設定*/
+                top:-30px;
+            }
         }
     }
+}
+
+.c-copyright{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
 }

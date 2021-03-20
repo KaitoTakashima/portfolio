@@ -1,3 +1,14 @@
 .l-fotter{
-    background-color: #333333;
+    & .l-page_top{
+        text-align: center;
+        margin-bottom:20px;
+        @include breakpoint (tablet){
+            text-align: right;
+            margin-right:100px;
+        }
+    }
+    & .l-footer-inner{
+        background-color: #333333;
+        padding:40px 30px;
+    }
 }
