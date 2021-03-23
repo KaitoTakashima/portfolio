@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 
     <script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="./js/hamburger.js"></script>
+    <script type="text/javascript" src="./js/scrolleffect.js"></script>
+
 </head>
 <body>
 
@@ -40,18 +43,18 @@
                 </div>
             </div>
         </nav>
-        <h1 class="site-title_sp">Portfolio <br>by Kaito Takashima</h1>
+        <h1 class="site-title_sp"><a href="#">Portfolio<span>by Kaito Takashima</span></a></h1>
         <div class="main_visual_area">
             <div class="main-visual">
-                <h1 class="site_title_pc">Portfolio <br>by Kaito Takashima</h1>
+                <h1 class="site_title_pc">Portfolio<span>by Kaito Takashima</span></h1>
             </div>
             <nav class="header_nav_pc">
                 <ul class="header_nav_content">
                     <li class="header_nav_list"><a href="#">Home</a></li>
-                    <li class="header_nav_list"><a href="#">About</a></li>
-                    <li class="header_nav_list"><a href="#">Skills</a></li>
-                    <li class="header_nav_list"><a href="#">Works</a></li>
-                    <li class="header_nav_list"><a href="#">Music</a></li>
+                    <li class="header_nav_list"><a href="#about">About</a></li>
+                    <li class="header_nav_list"><a href="#skills">Skills</a></li>
+                    <li class="header_nav_list"><a href="#works">Works</a></li>
+                    <li class="header_nav_list"><a href="#music">Music</a></li>
                 </ul>
             </nav>
         </div>
@@ -61,7 +64,7 @@
     </header>
 
   <main class="l-main_wrapper">
-    <section class="l-section p-about_sec">
+    <section class="l-section p-about_sec js_scrolleffect" id="about">
         <h2 class="c-sec_title">About<span>私について</span></h2>
         <div class="p-about_content">
             <p>初めまして、髙嶌海登です。現在就職活動中の学生。<br>
@@ -78,7 +81,7 @@
         </ul>
     </section><!-- about_sec -->
 
-    <section class="l-section p-skills_sec">
+    <section class="l-section p-skills_sec js_scrolleffect" id="skills">
         <h2 class="c-sec_title">Skills<span>使用技術</span></h2>
         <div class="p-skills_group">
             <figure class="p-skills_content">
@@ -112,7 +115,7 @@
         </div>
     </section><!-- skills_sec -->
 
-    <section class="l-section p-works_sec">
+    <section class="l-section p-works_sec js_scrolleffect" id="works">
         <h2 class="c-sec_title">Works<span>制作実績</span></h2>
         <div class="p-works_group">
             <figure class="p-work_content">
@@ -134,7 +137,7 @@
         </div>
     </section><!-- works_sec -->
 
-    <section class="l-section p-music_sec">
+    <section class="l-section p-music_sec js_scrolleffect" id="music">
         <h2 class="c-sec_title">Music<span>音楽制作</span></h2>
         <div class="p-music_heading">
             <p>ボカロP<strong>「u:mi」</strong>として音楽制作をしています。<br>
@@ -197,6 +200,5 @@
             </div>
         </div>
     </footer>
-
 </body>
 </html>
