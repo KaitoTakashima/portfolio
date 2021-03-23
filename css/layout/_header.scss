@@ -14,6 +14,9 @@
                 height:30px;
                 top:20px;
                 right:20px;
+                &:hover{
+                    cursor: pointer;
+                }
                 & .menu-trigger{
                     display: inline-block;
                     position:relative;
@@ -59,6 +62,7 @@
                 opacity: 0;
                 visibility: hidden;
                 transition: all .3s;/*アニメーションの設定*/
+                z-index:2;
                 & .slide_menu_content{
                     & .slide_menu_list{
                         text-align: center;
@@ -96,6 +100,25 @@
                         & a{
                             color:white;
                             font-weight: bold;
+                            position:relative;
+                            &::after{
+                                content:"";
+                                position:absolute;
+                                background: white;
+                                width:100%;
+                                height:2px;
+                                bottom:-5px;
+                                left:0;
+                                /*アニメーションの指定*/
+                                transition: all .3s;
+                                transform: scale(0, 1);/*X方向0、Y方向1*/
+                                transform-origin: left top;/*左上基点*/
+                            }
+                            &:hover{
+                                &::after{
+                                    transform: scale(1, 1);/*X方向0、Y方向1*/
+                                }
+                            }
                         }
                     }
                 }
@@ -122,9 +145,18 @@
     }
     & .site-title_sp{
         position:absolute;
-        color:white;
-        font-size: 20px;
-        margin:20px;
+        margin:0px 20px;
+        z-index: 2;
+        & a{
+            color:white;
+            font-size: 20px;
+            &:hover{
+                cursor: pointer;
+            }
+            & span{
+                display: block;
+            }
+        }
         @include breakpoint (tablet){
          display: none;
         }
@@ -148,13 +180,51 @@
                 background-size: cover;
                 height:90vh;
                 position:relative;
-                & .site_title_pc{
+            }
+            & .site_title_pc{
+                opacity: 0;
+                @include breakpoint (tablet){
+                    opacity: 1;
                     position:absolute;
                     bottom:0;
                     left:-10%;
                     background-color: white;
                     padding:0 40px 0 0;
                     font-size: 7rem;
+                }
+                & span{
+                    display: block;
+                }
+            }
+        }
+        & .main-visual_single{
+            background-image: url("../image/main-img_single.png");
+            height:60vh;
+            position:relative;
+            @include breakpoint (tablet){
+                background-image: url("../image/main-img_single.png");
+                height:90vh;
+            }
+            & .works_title_sp{
+                position:absolute;
+                color: white;
+                top:50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                text-align: center;
+                @include breakpoint (tablet){
+                    display: none;
+                }
+                & span{
+                    display: block;
+                    font-size: 2rem;
+                }
+            }
+            & .works_title{
+              text-align: center;
+              padding:10px 120px;
+                & span{
+                    font-size: 2rem;
                 }
             }
         }
@@ -169,14 +239,33 @@
                    flex-direction: column;
                    justify-content: center;
                    align-items: center;
-                   & .header_nav_list{
+                    & .header_nav_list{
                        margin-bottom:40px;
-                       & a{
+                        & a{
                            color:#333;
                            font-weight: bold;
-                       }
-                   }
-               }
+                           position:relative;
+                            &::after{
+                                content:"";
+                                position:absolute;
+                                background: #333;
+                                width:100%;
+                                height:2px;
+                                bottom:-5px;
+                                left:0;
+                                /*アニメーションの指定*/
+                                transition: all .3s;
+                                transform: scale(0, 1);/*X方向0、Y方向1*/
+                                transform-origin: left top;/*左上基点*/
+                            }
+                            &:hover{
+                                &::after{
+                                    transform: scale(1, 1);/*X方向0、Y方向1*/
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }
